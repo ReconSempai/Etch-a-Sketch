@@ -1,0 +1,1 @@
+This proyect is about creating a little "sketchpad".I,m looking to prove my abilities with js and css to make a good work.
