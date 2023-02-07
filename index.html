@@ -14,11 +14,12 @@
         <h6>Select the size</h6>
         <button id="popout" class="btn btn-success">Select</button>
     </div>
-    <div class="table"></div>
+    <p id="message"></p>
+    <div id="table" class="table"></div>
     <div class="footer">
-        <button class="btn btn-dark">Black</button>
-        <button class="btn btn-secondary">Rainbow</button>
-        <button class="btn btn-danger">Reset</button>
+        <button id="choice" class="btn btn-dark" onclick="setColor('black')">Black</button>
+        <button id="choice" class="btn btn-secondary" onclick="setColor('rainbow')">Rainbow</button>
+        <button id="choice" class="btn btn-danger" onclick="resetTable()">Reset</button>
     </div>
 
 
