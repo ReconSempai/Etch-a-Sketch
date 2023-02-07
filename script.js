@@ -1,11 +1,23 @@
 let color = 'black'
+let click = false
 createTable(16);
 let selectBtn = document.querySelector("#popout");
     selectBtn.addEventListener("click",function(){
         let size = getSize();
         createTable(size)
     })
-
+document.querySelector('body').addEventListener('click',function(e) {
+    if (e.target.tagName != "BUTTON"){
+        click = !click
+        let draw =document.querySelector('#draw');
+        if (click){
+            draw.innerHTML = "Draw enabled";
+        }
+        else{
+            draw.innerHTML = "Draw disabled";
+        }
+    }
+})
 
 
 function createTable(size){
@@ -39,13 +51,14 @@ function getSize(){
 }
 
 function colorDiv(){
+    if(click){
     if(color == 'rainbow'){
         this.style.backgroundColor = getRandomRgb();
     }
     else{
         this.style.backgroundColor = 'black'
-    }
-
+    }}
+   
 }
 
 function setColor(colorChoice){
